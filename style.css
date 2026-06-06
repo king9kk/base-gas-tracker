@@ -1,0 +1,61 @@
+/* Base Gas Tracker Styles */
+:root {
+  --primary: #0052ff;
+  --bg: #0a0b0d;
+  --card: #1a1b1f;
+  --text: #ffffff;
+  --muted: #888888;
+  --border: #2a2b2f;
+  --slow: #00c853;
+  --average: #ffab00;
+  --fast: #ff3d00;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Arial', sans-serif;
+}
+
+.gas-card.slow .gas-value { color: var(--slow); }
+.gas-card.average .gas-value { color: var(--average); }
+.gas-card.fast .gas-value { color: var(--fast); }
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge-low { background: rgba(0,200,83,0.2); color: var(--slow); }
+.badge-med { background: rgba(255,171,0,0.2); color: var(--average); }
+.badge-high { background: rgba(255,61,0,0.2); color: var(--fast); }
+
+.refresh-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.refresh-btn:hover { background: #0040cc; }
+
+.history-list {
+  max-width: 600px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--muted);
+}
